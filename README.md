@@ -15,7 +15,7 @@ The code allows to solve three optimal control problems in the following order:
 
 2. Muscle parameter estimation: Solves the muscle redundancy problem where the variable space can be extended with user-specified muscle tendon parameters. Depending on availability, the user can provide experimental muscle fiber length data to be tracked by simulated fiber lengths and/or EMG data to be tracked by simulated muscle excitations. The problem can be made EMG-driven as well, where the excitations will match the EMG signal up to a specified tolerance.
 
-3. Validation muscle redundancy problem: Solves the muscle redundancy problem using the optimized musculoskeletal model, inverse kinematics and/or inverse dynamics data. The idea of this simulation is to analyse whether the parameters (outcome of the muscle parameter estimation problem) predict musculoskeletal behaviour better than the generic model. If this is not the case, there might be a problem of overfitting and it should be verified whether the provided input data contains sufficient information to estimate all variable parameters. Reducing the the weighting factors of the tracking terms might also help in this case (to avoid that possible experimental data is tracked at the cost of unrealistically high muscle activations). Note that for a full validation, separate validation movements should be used (see also publications for details).
+3. Validation muscle redundancy problem: Solves the muscle redundancy problem using the optimized musculoskeletal model, inverse kinematics and/or inverse dynamics data. The idea of this simulation is to analyse whether the parameters (outcome of the muscle parameter estimation problem) predict musculoskeletal behaviour better than the generic model. If this is not the case, there might be a problem of overfitting and it should be verified whether the provided input data contains sufficient information to estimate all variable parameters. Reducing the weighting factors of the tracking terms might also help in this case (to avoid that possible experimental data is tracked at the cost of unrealistically high muscle activations). Note that for a full validation, separate validation movements should be used (see also publications for details).
 
 The user is off course free to select any of the three described problems. 
 
@@ -60,7 +60,7 @@ Related to the required input files:
 
 The following input arguments are required to use EMG data:
    - **Misc.EMGconstr**: boolean to select whether you want to track provided EMG signals.
-   - **Misc.EMGfile**: cell array of filenames containing EMG data of different motion trials (.mot file). (can be empty )
+   - **Misc.EMGfile**: cell array of filenames containing EMG data of different motion trials (.mot file). (can be empty)
    - **Misc.EMGSelection**: cell aray with muscles that are constrained/driven by EMG data.
 
 #### Required input arguments when using Ultrasound data
